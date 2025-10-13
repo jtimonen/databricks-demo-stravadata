@@ -1,6 +1,6 @@
 # databricks-demo-stravadata
 
-Databricks demo project with [Strava](https://www.strava.com/dashboard) activity data.
+Databricks demo project with my [Strava](https://www.strava.com/dashboard) activity data. Currently this is limited to the Walk, Run, Ride, and Nordic Ski activity types since they are most common. The total number of these activities is around 1700 as of Oct 2025. An example machine learning problem to apply here could be to try and predict the sport type based on predictor variables like average speed, duration, date, elevation gain, and weather data.
 
 ## Content
 
@@ -10,7 +10,7 @@ Databricks demo project with [Strava](https://www.strava.com/dashboard) activity
 
 ## Data flow
 
-1. Raw 'activities.csv' file is dropped into the landing volume. This I have obtained by exporting my data from Strava. In a real pipeline this manual part could be replaced by integration with the Strava API, so that the data is autoloaded, possibly incrementally.
+1. Raw `activities.csv` file is dropped into the landing volume. This I have obtained by exporting my data from Strava. In a real pipeline this manual part could be replaced by integration with the Strava API, so that the data is autoloaded, possibly incrementally.
 2. Bronze transformations handle csv reading, and sanitizing the column names of the activities.
 3. Silver transformations select certain columns, creates new columns, handles de-duplication and drops rows with NULL values.
 4. Gold transformations produce data summaries that reveal insights.
@@ -23,6 +23,4 @@ The summaries can answer questions like
 - Which sport is my common activity type in February?
 - Which sport has the most uphills?
 
-## Notes
 
-Currently this is limited to the Walk, Run, Ride, and Nordic Ski activity types since they are most common. The total number of these activities is around 1700 as of Oct 2025. An example machine learning problem to apply here could be to try and predict the sport type based on predictor variables like average speed, duration, date, elevation gain, and weather data.
