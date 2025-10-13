@@ -8,7 +8,7 @@ Currently this pipeline filters the activities only to those Walk, Run, Ride, an
 
 - `setup` contains code for creating the catalog, schemas, and a landing volume
 - `pipeline` contains the actual pipeline code, using the Medallion architechture
-- `explorations.ipynb` is a notebook for studying the data in different phases of the pipeline
+- `exploration.ipynb` is a notebook for studying the data in different phases of the pipeline
 
 ## Data flow
 
