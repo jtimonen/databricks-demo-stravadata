@@ -1,0 +1,228 @@
+{
+  "datasets": [
+    {
+      "name": "a58ec6e3",
+      "displayName": "summary_by_sport",
+      "queryLines": [
+        "SELECT * FROM workouts_demo.gold.summary_by_sport"
+      ]
+    },
+    {
+      "name": "2130cfd3",
+      "displayName": "summary_by_month",
+      "queryLines": [
+        "SELECT * FROM workouts_demo.gold.summary_by_month"
+      ]
+    }
+  ],
+  "pages": [
+    {
+      "name": "1a052db5",
+      "displayName": "Visualization",
+      "layout": [
+        {
+          "widget": {
+            "name": "b8e3d265",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "a58ec6e3",
+                  "fields": [
+                    {
+                      "name": "sport",
+                      "expression": "`sport`"
+                    },
+                    {
+                      "name": "avg_speed_kmh",
+                      "expression": "`avg_speed_kmh`"
+                    }
+                  ],
+                  "disaggregated": true
+                }
+              }
+            ],
+            "spec": {
+              "version": 3,
+              "widgetType": "bar",
+              "encodings": {
+                "x": {
+                  "fieldName": "sport",
+                  "scale": {
+                    "type": "categorical",
+                    "sort": {
+                      "by": "y-reversed"
+                    }
+                  }
+                },
+                "y": {
+                  "fieldName": "avg_speed_kmh",
+                  "scale": {
+                    "type": "quantitative"
+                  }
+                }
+              },
+              "frame": {
+                "title": "Average Speed by Sport",
+                "showTitle": true
+              }
+            }
+          },
+          "position": {
+            "x": 0,
+            "y": 0,
+            "width": 3,
+            "height": 6
+          }
+        },
+        {
+          "widget": {
+            "name": "9b81bd11",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "a58ec6e3",
+                  "fields": [
+                    {
+                      "name": "sport",
+                      "expression": "`sport`"
+                    },
+                    {
+                      "name": "avg_elevation_per_distance",
+                      "expression": "`avg_elevation_per_distance`"
+                    }
+                  ],
+                  "disaggregated": true
+                }
+              }
+            ],
+            "spec": {
+              "version": 3,
+              "widgetType": "bar",
+              "encodings": {
+                "x": {
+                  "fieldName": "sport",
+                  "scale": {
+                    "type": "categorical"
+                  }
+                },
+                "y": {
+                  "fieldName": "avg_elevation_per_distance",
+                  "scale": {
+                    "type": "quantitative"
+                  }
+                }
+              },
+              "frame": {
+                "title": "Average Elevation per Distance by Sport",
+                "showTitle": true
+              }
+            }
+          },
+          "position": {
+            "x": 3,
+            "y": 0,
+            "width": 3,
+            "height": 6
+          }
+        },
+        {
+          "widget": {
+            "name": "f5573b45",
+            "queries": [
+              {
+                "name": "main_query",
+                "query": {
+                  "datasetName": "2130cfd3",
+                  "fields": [
+                    {
+                      "name": "sum(activities)",
+                      "expression": "SUM(`activities`)"
+                    },
+                    {
+                      "name": "activity_month_int",
+                      "expression": "`activity_month_int`"
+                    },
+                    {
+                      "name": "sport",
+                      "expression": "`sport`"
+                    }
+                  ],
+                  "disaggregated": false
+                }
+              }
+            ],
+            "spec": {
+              "version": 3,
+              "widgetType": "heatmap",
+              "encodings": {
+                "x": {
+                  "fieldName": "activity_month_int",
+                  "scale": {
+                    "type": "categorical"
+                  },
+                  "displayName": "Month"
+                },
+                "y": {
+                  "fieldName": "sport",
+                  "scale": {
+                    "type": "categorical"
+                  }
+                },
+                "color": {
+                  "fieldName": "sum(activities)",
+                  "scale": {
+                    "type": "quantitative"
+                  }
+                }
+              },
+              "frame": {
+                "title": "Activities per Month per Sport",
+                "showTitle": true
+              }
+            }
+          },
+          "position": {
+            "x": 0,
+            "y": 6,
+            "width": 6,
+            "height": 6
+          }
+        }
+      ],
+      "pageType": "PAGE_TYPE_CANVAS"
+    },
+    {
+      "name": "4014aace",
+      "displayName": "Global Filters",
+      "layout": [
+        {
+          "widget": {
+            "name": "ca8fac1f",
+            "spec": {
+              "version": 2,
+              "widgetType": "filter-single-select",
+              "encodings": {},
+              "frame": {
+                "showTitle": true
+              }
+            }
+          },
+          "position": {
+            "x": 0,
+            "y": 0,
+            "width": 1,
+            "height": 2
+          }
+        }
+      ],
+      "pageType": "PAGE_TYPE_GLOBAL_FILTERS"
+    }
+  ],
+  "uiSettings": {
+    "theme": {
+      "widgetHeaderAlignment": "ALIGNMENT_UNSPECIFIED"
+    }
+  }
+}
