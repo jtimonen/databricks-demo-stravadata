@@ -1,6 +1,8 @@
 # databricks-demo-stravadata
 
-Databricks demo project with my [Strava](https://www.strava.com/dashboard) activity data. Currently this pipeline filters the activities only to those Walk, Run, Ride, and Nordic Ski activities that certain columns (not NULL). The total number of these activities is around 1700 as of Oct 2025. An example machine learning problem to apply here could be to try and predict the sport type based on predictor variables like average speed, duration, date, elevation gain, and weather data.
+Databricks demo project with my [Strava](https://www.strava.com/dashboard) activity data. 
+
+Currently this pipeline filters the activities only to those Walk, Run, Ride, and Nordic Ski activities that certain columns (not NULL). The total number of these activities is around 1700 as of Oct 2025. An example machine learning problem to apply here could be to try and predict the sport type based on predictor variables like average speed, duration, date, elevation gain, and weather data.
 
 ## Content
 
