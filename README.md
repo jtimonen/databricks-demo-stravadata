@@ -20,7 +20,7 @@ Databricks demo project with my [Strava](https://www.strava.com/dashboard) activ
 The summaries can answer questions like
 
 - What is my average speed for each sport type?
-- Which sport is my common activity type in February?
+- Which sport is my most common activity type in February?
 - Which sport has the most uphills?
 
 
