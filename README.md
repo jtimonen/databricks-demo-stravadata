@@ -2,7 +2,7 @@
 
 Databricks demo project with my [Strava](https://www.strava.com/dashboard) activity data. 
 
-Currently this pipeline filters the activities only to those Walk, Run, Ride, and Nordic Ski activities that have certain columns available (not NULL). The total number of these activities is around 1700 as of Oct 2025. *NOTE:* This currently does not use Delta Live Tables.
+This pipeline filters the activities only to those Walk, Run, Ride, and Nordic Ski activities that have certain columns available (not NULL). The total number of these activities is around 1700 as of Oct 2025. *NOTE:* This is an imperative pipeline and does not use the new Delta Live Tables.
 
 ## Content
 
