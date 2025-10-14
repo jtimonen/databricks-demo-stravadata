@@ -2,16 +2,18 @@
 
 Databricks demo project with my [Strava](https://www.strava.com/dashboard) activity data. 
 
-This pipeline filters the activities only to those Walk, Run, Ride, and Nordic Ski activities that have certain columns available (not NULL). The total number of these activities is around 1700 as of Oct 2025. *NOTE:* This is an imperative pipeline and does not use the new Delta Live Tables.
+This pipeline filters the activities only to those Walk, Run, Ride, and Nordic Ski activities that have certain columns available (not NULL). The total number of these activities is around 1700 as of Oct 2025. *NOTE:* This is an imperative pipeline as opposed to the newer Lakeflow Declarative Pipeline. It can be run by creating a job like below in the Databricks UI.
+
+![dashboard](img/job.png)
 
 ## Content
 
 - `setup` contains code for creating the catalog, schemas, and a landing volume
 - `pipeline` contains the actual pipeline code, using the Medallion architechture
 - `exploration.ipynb` is a notebook for studying the data in different phases of the pipeline
-- `dashboard.lvdash.json` is a dashboard that can be viewed in Databricks. Below is an example of the dashboard that I made with the Databricks editor.
+- `dashboard.lvdash.json` is a dashboard that can be viewed in the Databricks UI. Below is an example of the dashboard that I made with the Databricks editor.
 
-![dashboard](db.png)
+![dashboard](img/db.png)
 
 ## Data flow
 
